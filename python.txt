@@ -1,0 +1,170 @@
+1.
+# input=[1,2,3,4,5],[10,20,30,40,50]
+#output=[10,40,90,160,250]
+lst1=[1,2,3,4,5]
+lst2=[10,20,30,40,50]
+for i in lst1:
+    for j in lst2:
+        lst=list(map(lambda i,j:i*j,lst1,lst2))
+print(lst)
+#2. print table of any number using function
+n=int(input("enter number"))
+list1=[1,2,3,4,5,6,7,8,9,10]
+for i in range(1,len(list1)):
+    lst=list(map(lambda i:n*i,list1))
+print(lst)
+n=int(input("enter number"))
+list1=[]
+for i in range(1,10+1):
+    list1.append(i)
+    lst=list(map(lambda i:n*i,list1))
+print(lst)
+#3.create a dictionary of employee data and print whose salary high than 25000
+n=int(input("enter total no. of employee"))
+dict={}
+for i in range(n):
+  k=int(input("enter no.employee"))
+  dict[k]={}
+  k1=input("enter employee name")
+  v=int(input("enter salary"))
+  dict[k].update({k1:v})
+print(dict)
+print("name of employee whose salary is high than 25000")
+for m in dict.keys():
+  for j in dict[m].keys():
+    if(dict[m][j]>25000):
+      print(j)
+#4.accept a no. of term n print in form of{n:n*5}
+dict={}
+n=int(input("enter no. of terms"))
+for i in range(1,n+1):
+  k=i
+  v=i*5
+  dict.update({k:v})
+print(dict)
+#5.find maximum and minimum value in dictionary.
+dict={}
+n=int(input("enter no. of terms"))
+for i in range(n):
+  k=int(input("enter key"))
+  v=int(input("enter value"))
+  dict.update({k:v})
+ma=max(dict.values())
+print(ma)
+mi=min(dict.values())
+print(mi)
+#6.check whether inputed key is present in list or not.
+dict={}
+k1=int(input("enter key"))
+x=int(input())
+for i in range(x):
+  k=int(input("enter key"))
+  v=int(input("enter value"))
+  dict.update({k:v})
+if k1 in dict:
+    print("yes")
+else:
+    print("no.")
+#7.print a letter 'A'
+for i in range(1,6):
+  for j in range(1,5):
+    if(i==1 and j in {2,3}):
+      print("*",end='')
+    elif(i in {2,4,5} and j in {1,4}):
+      print("*",end='')
+    elif(i==3):
+      print("*",end='')
+    else:
+      print(" ",end='')
+  print()
+#8.concatenate first , middle , last
+str1=input("enter string")
+str2=input("enter string")
+str=""
+t1=len(str1)
+t2=len(str2)
+s1=str1[0]
+s2=str2[0]
+l1=str1[-1]
+l2=str2[-1]
+m1=str1[t1//2]
+m2=str2[t2//2]
+str=str+s1+s2+m1+m2+l1+l2
+print(str)
+#9.capital first and last character
+str=input("enter string")
+t=len(str)
+str1=""
+s=(str[0].upper())
+l=(str[-1].upper())
+str1=str1+s+str[1:t-1]+l
+print(str1)
+#10.check whether number is perfect or not
+n=int(input("enter number"))
+i=1
+s=0
+for i in range(i,n,1):
+  if n%i==0:
+    s=s+i
+if(s==n):
+  print("perfect")
+else:
+  print("not perfect")
+#11.string palindrome or not
+str=input("enter string")
+str1=str[::-1]
+if(str==str1):
+  print("palindrome")
+else:
+  print("not palindrome")
+#12.program to check number is prime or not
+n=int(input("enter number"))
+i=2
+c=0
+while i<=(n-1):
+  if(n%i==0):
+    c=c+1
+  i=i+1
+if(c==0):
+  print("prime")
+else:
+  print("not prime")
+#13.check number is neon or not
+n=int(input("enter number"))
+s=n**2
+print(s)
+t=0
+while s>0:
+  r=s%10
+  t=t+r
+  s=s//10
+if(t==n):
+  print("no. is neon")
+else:
+  print("no. is not neon")
+#14.program to reverse the number and check it is palindome or not
+x=int(input("enter number"))
+t=x
+r=0
+while(x>0):
+  l=x%10
+  r=l+10*r
+  x=x//10
+print("%d"%r)
+if(r==t):
+  print("palindrome")
+else:
+  print("not palindrome")
+#15.cocatenate two list
+list1=[]
+list2=[]
+n=int(input("enter total number"))
+for i in range(n):
+    list1.insert(i,int(input()))
+print(list1)
+for i in range(n):
+    list2.insert(i,int(input()))
+print(list2)
+lst=zip(list1,list2)
+lst=list(lst)
+print(lst)
