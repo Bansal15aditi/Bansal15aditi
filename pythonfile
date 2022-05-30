@@ -1,0 +1,5 @@
+# check whether a string is start with given character or not
+str=input("enter string")
+ch=input("enter character")
+check=lambda ch:True if ch==str[0] else False
+print(check(ch))
